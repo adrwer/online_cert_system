@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Student Form</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+
+  <form method="POST" action="/">
+    <p class="h4 mb-4">Student Online Certification Application Form</p>
+    {{ form.hidden_tag() }}
+    {{ form.first_name.label }}
+    {{ form.first_name(placeholder="First Name",class="form-control mb-4") }}
+    {{ form.second_name.label }}
+    {{ form.second_name(placeholder="Second Name",class="form-control mb-4") }}
+    {{ form.third_name.label }}
+    {{ form.third_name(placeholder="Third Name",class="form-control mb-4") }}
+    {{ form.email.label }}
+    {{ form.email(placeholder="Personal Email",class="form-control mb-4") }}
+    {{ form.course.label }}
+    {{ form.course(placeholder="Course",class="form-control mb-4") }}
+    {{ form.reg_number.label }}
+    {{ form.reg_number(placeholder="Registration Number",class="form-control mb-4") }}
+    {{ form.submit() }}
+  </form>
+        </div>
+      </div>
+  </div>
+{% endblock %}
